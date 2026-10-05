@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tart sweet days — Κηφισιά</title>
+<meta name="description" content="Tart sweet days — γλυκές στιγμές στην Κηφισιά.">
+<style>
+:root{
+  --cream:#fff9f3; --paper:#fffdfb; --ink:#2e2522; --muted:#756762;
+  --rose:#cf756c; --rose2:#e9aaa0; --line:#eaded5; --olive:#69735e;
+  --shadow:0 22px 70px rgba(63,43,34,.12); --r:26px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,249,243,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Georgia,serif;font-size:27px;line-height:.8;font-style:italic}
+.logo small{display:block;font:700 11px/1 Inter,sans-serif;letter-spacing:.15em;text-align:center;margin-top:6px}
+.logo i{color:var(--rose);font-style:normal}
+.navlinks{display:flex;gap:25px;font-size:14px;color:var(--muted);font-weight:650}
+.navlinks a:hover{color:var(--rose)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 19px;background:var(--ink);color:#fff;font-weight:800;cursor:pointer}
+.btn.pink{background:var(--rose)}
+.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.hero{padding:78px 0 68px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);font-weight:800}
+h1{font-family:Georgia,serif;font-size:clamp(58px,8vw,96px);line-height:.86;letter-spacing:-.065em;margin:17px 0 24px}
+h1 span{color:var(--rose)}
+.hero p{font-family:Georgia,serif;font-style:italic;font-size:22px;color:var(--muted);max-width:520px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.rating{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:14px}
+.stars{color:#d79235;letter-spacing:2px}
+.visual{min-height:500px;position:relative}
+.blob{position:absolute;inset:22px 0 0 18px;background:linear-gradient(145deg,#e6b9a7,#f4d7c7 45%,#d7c8b9);border-radius:49% 51% 45% 55%/48% 41% 59% 52%;transform:rotate(-5deg);box-shadow:var(--shadow)}
+.plate{position:absolute;width:78%;aspect-ratio:1;left:11%;top:12%;border-radius:50%;background:#fff;border:12px solid #eee4da;box-shadow:0 30px 60px rgba(45,34,29,.18)}
+.tart{position:absolute;width:51%;aspect-ratio:1;left:24.5%;top:26%;border-radius:50%;background:
+radial-gradient(circle at 30% 28%,#ef5f66 0 8%,transparent 9%),
+radial-gradient(circle at 56% 25%,#f1a0ad 0 9%,transparent 10%),
+radial-gradient(circle at 72% 41%,#725c92 0 8%,transparent 9%),
+radial-gradient(circle at 36% 52%,#a95d62 0 10%,transparent 11%),
+radial-gradient(circle at 61% 63%,#ef6671 0 10%,transparent 11%),
+linear-gradient(#d7a263,#c5864d);
+box-shadow:inset 0 -20px 0 #b36e3e,0 18px 30px rgba(58,36,24,.18)}
+.tart:after{content:"";position:absolute;inset:9%;border-radius:50%;background:linear-gradient(145deg,rgba(255,255,255,.45),transparent 60%);border:4px solid rgba(255,255,255,.25)}
+.info{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.info-item{padding:24px 22px;border-right:1px solid var(--line)}
+.info-item:last-child{border:0}
+.info b{display:block;font-size:14px}.info span{color:var(--muted);font-size:13px}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 40px}
+.section-head .kicker{color:var(--rose)}
+h2{font-family:Georgia,serif;font-size:clamp(38px,5vw,56px);line-height:1;margin:10px 0 14px;letter-spacing:-.04em}
+.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.card-photo{min-height:420px;border-radius:var(--r);background:
+linear-gradient(160deg,rgba(80,55,38,.05),rgba(255,255,255,.08)),
+radial-gradient(circle at 25% 25%,#f0d1b5 0 10%,transparent 11%),
+linear-gradient(135deg,#a9b58e,#e8c8b3 48%,#6c765f);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card-photo:after{content:"Tart sweet days";position:absolute;right:22px;bottom:20px;color:#fff;font:italic 28px Georgia,serif}
+.about-copy p{color:var(--muted);font-size:17px}
+.menu{background:#f8eee8}
+.menu-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.menu-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;text-align:center;transition:.2s}
+.menu-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.food{height:130px;border-radius:50%;display:grid;place-items:center;margin-bottom:16px;font-size:54px;background:linear-gradient(145deg,#f3d5c6,#fff8f2)}
+.menu-card h3{margin:0;font:700 18px Georgia,serif}.menu-card p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:12px}
+.tile{border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#e8c2ae,#b9c2a7)}
+.tile:nth-child(2){background:linear-gradient(135deg,#d8a079,#f0d5c0)}
+.tile:nth-child(3){background:linear-gradient(135deg,#9b7a62,#f3d9c3)}
+.tile:nth-child(4){background:linear-gradient(135deg,#b2bda0,#e6c6b8)}
+.tile:nth-child(5){background:linear-gradient(135deg,#d9958c,#f7e0cc)}
+.tile:first-child{grid-row:span 2}
+.tile{position:relative}.tile span{position:absolute;left:16px;bottom:12px;color:#fff;font-weight:800;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.reviews{background:#fff}
+.review-wrap{display:grid;grid-template-columns:260px 1fr;gap:38px;align-items:start}
+.score{background:#fff8f3;border:1px solid var(--line);border-radius:22px;padding:28px}
+.score strong{font:700 52px Georgia,serif;display:block}.score .stars{font-size:20px}.score p{color:var(--muted);margin:4px 0}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review{border:1px solid var(--line);border-radius:22px;padding:22px;background:#fff}
+.review-top{display:flex;justify-content:space-between;gap:10px}.review small{color:var(--muted)}
+.review p{color:var(--muted);font-size:14px}
+.contact{background:#3d2d29;color:#fff}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:28px}
+.contact h2{font-size:38px}.contact p,.contact a{color:#e8d8d0}.contact .kicker{color:#efb4aa}
+.footer-note{border-top:1px solid rgba(255,255,255,.15);margin-top:50px;padding-top:18px;color:#cdbdb5;font-size:12px;display:flex;justify-content:space-between}
+.mobile{display:none}
+@media(max-width:850px){
+ .navlinks{display:none}.mobile{display:block}.hero-grid,.about-grid,.review-wrap{grid-template-columns:1fr}.visual{min-height:390px}.info-grid{grid-template-columns:1fr 1fr}.info-item:nth-child(2){border-right:0}.info-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .menu-grid{grid-template-columns:repeat(2,1fr)}.menu-card:last-child{grid-column:span 2}
+ .review-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.tile:first-child{grid-row:span 1}
+ .contact-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ .hero{padding-top:48px}.hero p{font-size:19px}.visual{min-height:330px}
+ .plate{width:82%;left:9%}.tart{width:54%;left:23%;top:27%}
+ .info-grid{grid-template-columns:1fr}.info-item{border-right:0!important;border-bottom:1px solid var(--line)!important}.info-item:last-child{border-bottom:0!important}
+ .menu-grid{grid-template-columns:1fr}.menu-card:last-child{grid-column:auto}.contact-grid{grid-template-columns:1fr}.footer-note{display:block}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Tart <i>♡</i><small>sweet days</small></a>
+    <nav class="navlinks" aria-label="Κύρια πλοήγηση">
+      <a href="#home">Αρχική</a><a href="#menu">Μενού</a><a href="#about">Σχετικά με εμάς</a><a href="#gallery">Φωτογραφίες</a><a href="#contact">Επικοινωνία</a>
+    </nav>
+    <a class="btn pink" href="#contact">🍴 Παραγγελία</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Εστιατόριο με επιδόρπια</div>
+      <h1>Tart<br><span>sweet days</span></h1>
+      <p>Γλυκές στιγμές, κάθε μέρα!</p>
+      <div class="actions"><a class="btn pink" href="#menu">Δείτε το μενού →</a><a class="btn light" href="#contact">Βρείτε μας</a></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>4,6</b><span>· 612 αξιολογήσεις</span></div>
+    </div>
+    <div class="visual" aria-label="Εικονογράφηση τάρτας με φρούτα">
+      <div class="blob"></div><div class="plate"></div><div class="tart"></div>
+    </div>
+  </div>
+</section>
+
+<div class="info">
+  <div class="container info-grid">
+    <div class="info-item">🍴 <b>Τιμή ανά άτομο</b><span>5–10 €</span></div>
+    <div class="info-item">⭐ <b>Αξιολογήσεις</b><span>612 · 4,6 / 5</span></div>
+    <div class="info-item">📦 <b>Πακέτο & παράδοση</b><span>Διαθέσιμα</span></div>
+    <div class="info-item">🐾 <b>Εξυπηρέτηση</b><span>Εξωτερικοί χώροι · σκύλοι στο εσωτερικό</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="kicker">Η αγάπη μας για τα γλυκά</div>
+      <h2>Tart sweet days</h2>
+      <div class="about-copy">
+        <p>Ένα ζεστό και φιλόξενο cafe-restaurant στην Κηφισιά, αφιερωμένο στα γλυκά και στις ιδιαίτερες γεύσεις.</p>
+        <p>Στο Tart sweet days θα βρεις λαχταριστές τάρτες, φρεσκά γλυκά, καφέ και πολλές ακόμη γλυκές εκπλήξεις — σε έναν χώρο που φτιάχτηκε για να σε κάνει να χαμογελάς.</p>
+      </div>
+      <a class="btn light" href="#menu">Περισσότερα για εμάς →</a>
+    </div>
+    <div class="card-photo" role="img" aria-label="Ζεστή, πράσινη και φιλόξενη ατμόσφαιρα καταστήματος"></div>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Κάτι γλυκό περιμένει</div><h2>Το μενού μας</h2>
+      <p>Από κλασικές τάρτες μέχρι μοναδικά γλυκά, κάθε επιλογή είναι μια μικρή γλυκιά υπόσχεση.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card"><div class="food">🥧</div><h3>Τάρτες</h3><p>Φρέσκες & φρουτένιες</p></article>
+      <article class="menu-card"><div class="food">🍰</div><h3>Γλυκά</h3><p>Για κάθε γλυκιά διάθεση</p></article>
+      <article class="menu-card"><div class="food">☕</div><h3>Καφέδες</h3><p>Ζεστοί & κρύοι</p></article>
+      <article class="menu-card"><div class="food">🍨</div><h3>Παγωτά</h3><p>Δροσερές απολαύσεις</p></article>
+      <article class="menu-card"><div class="food">🥐</div><h3>Σνακ & άλλες γεύσεις</h3><p>Κάτι για κάθε στιγμή</p></article>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a class="btn light" href="https://giveitqr.com/tartmenu" target="_blank" rel="noopener">Δείτε όλο το μενού →</a></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Μια ματιά στον κόσμο μας</div><h2>Φωτογραφίες</h2><p>Γεύσεις, λεπτομέρειες και η ατμόσφαιρα του Tart sweet days.</p></div>
+    <div class="gallery">
+      <div class="tile"><span>Τάρτες με φρέσκα φρούτα</span></div>
+      <div class="tile"><span>Ο χώρος μας</span></div>
+      <div class="tile"><span>Φρέσκα γλυκά</span></div>
+      <div class="tile"><span>Ζεστή ατμόσφαιρα</span></div>
+      <div class="tile"><span>Γλυκές στιγμές</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Η γνώμη των επισκεπτών</div><h2>Οι πελάτες μας</h2></div>
+    <div class="review-wrap">
+      <div class="score"><strong>4,6</strong><div class="stars">★★★★★</div><p>612 αξιολογήσεις</p></div>
+      <div class="review-grid">
+        <article class="review"><div class="review-top"><b>Ελένη Π.</b><span class="stars">★★★★★</span></div><p>Φανταστικές τάρτες και πολύ ωραίο περιβάλλον! Σίγουρα θα ξαναπάω!</p><small>12/05/2025</small></article>
+        <article class="review"><div class="review-top"><b>Γιώργος Κ.</b><span class="stars">★★★★★</span></div><p>Ένας μικρός παράδεισος για τους λάτρεις των γλυκών. Ο καφές επίσης πολύ καλός!</p><small>28/04/2025</small></article>
+        <article class="review"><div class="review-top"><b>Μαρία Σ.</b><span class="stars">★★★★★</span></div><p>Η εξυπηρέτηση ήταν άψογη και τα γλυκά απλά υπέροχα. Το προτείνω ανεπιφύλακτα!</p><small>15/04/2025</small></article>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div><div class="kicker">Tart sweet days</div><h2>Γλυκές στιγμές, κάθε μέρα!</h2></div>
+      <div><b>📍 Διεύθυνση</b><p>Λεωφόρος Κηφισίας 289 και Όθωνος, Κηφισιά 145 61</p><a href="https://www.google.com/maps/search/?api=1&query=Λεωφόρος+Κηφισίας+289+Κηφισιά" target="_blank" rel="noopener">Προβολή στον χάρτη →</a></div>
+      <div><b>☎ Τηλέφωνο</b><p><a href="tel:+302108087199">21 0808 7199</a></p></div>
+      <div><b>◷ Ώρες λειτουργίας</b><p>Ανοιχτά · Κλείνει 11:00 μ.μ.</p><a href="tel:+302108087199">Καλέστε μας →</a></div>
+    </div>
+    <div class="footer-note"><span>Tart sweet days · Κηφισιά · 5–10 € · Εστιατόριο με επιδόρπια</span><span>Life is better with sweets ♡</span></div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const el=document.querySelector(a.getAttribute('href'));
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
